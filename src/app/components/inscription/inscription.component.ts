@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { AuthService } from '../../services/service.service'
+
 
 @Component({
   selector: 'app-inscription',
@@ -6,14 +8,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inscription.component.html',
   styleUrl: './inscription.component.css'
 })
-export class inscriptionComponent implements OnInit { // 
+export class inscriptionComponent  { 
   
-  constructor() {
+  constructor( public auth : AuthService) {
     
   }
 
-  ngOnInit() {
-    console.log( "Hello les bro");
-  }
 
 }
