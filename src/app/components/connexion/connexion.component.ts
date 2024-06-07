@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/service.service';
 import { HttpClient } from '@angular/common/http';
-import { map, tap } from 'rxjs';
+import { map, tap } from 'rxjs'
 
 @Component({
   selector: 'app-connexion',
@@ -18,7 +18,7 @@ export class ConnexionComponent {
   constructor(public auth : AuthService, public http: HttpClient){
     this.http.get("https://api.chucknorris.io/jokes/random").pipe(
       map((x:any)=>x.value),
-      tap((x)=>this.value=x)
+      tap((x: any)=>this.value=x)
     ).subscribe()
   }
   }
